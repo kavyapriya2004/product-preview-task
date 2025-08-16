@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
+  <link href="https://fonts.google.com/specimen/Fraunces" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+    margin:0%;
+    padding: 0%;
+}
+.container{
+    display: flex;
+    border: 2px rgb(245, 243, 243) solid;
+    width:500px;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+.main{
+    width:200px;
+    display: flex;
+    flex-direction:column;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+button{
+    margin-top: 30px;
+    padding: 10px 30px;
+    color:white;
+    background-color:hsl(158, 36%, 37%);
+    border-radius: 10px;
+    border-style: none;
+}
+button:hover{
+    background-color: hsl(158, 42%, 18%);
+    color: white;
+}
+.amount{
+    margin-top: 10px;
+    color:hsl(158, 36%, 37%);
+    font-size: 25px;
+    font-weight: bold;
+}
+.per,.para{
+   color: hsl(228, 12%, 48%);
+   font-family:'Montserrat',sans-serif ;
+   font-size: 12px;
+   line-height: 20px;
+   font-weight: 500px;
+}
+.per{
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+h1{
+    margin-top: 10px;
+    font-size: 25PX;
+}
+.para{
+    margin-top: 10px;
+}
+#del{
+   color:hsl(228, 12%, 48%); 
+   font-size: medium;
+   margin-left: 10px;
+}
+body{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.img{
+    background-image: url("./images/image-product-desktop.jpg");
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 335px;
+    background-size:cover;
+    border-radius: 10px 0 0 10px;
+}
+h1,.amount,#del{
+    font-family:'Fraunces',serif;
+    font: weight 700px ;
+    line-height: 30px;
+}
+@media(max-width:600px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+        height: auto;
+    }
+    .img{
+        width: 100%;
+    }
+    .para,.amount{
+        font-size: 0.9rem;
+    }
+}
+  </style>
+</head>
+<body><div class="container">
+       <div class="img"></div>
+        <div class="main">
+        <p class="per">PERFUME</p>
+        <h1>Gabrielle Essence Eau De Perfume</h1>
+        <p class="para">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+         Perfumer-Creator for the House of CHANEL.</p>
+        <p class="amount">$149.99<del id="del">$169.99</del><br></p>
+        <button><img src="./images/icon-cart.svg" alt=""> 
+          Add to Cart  </button>
+        </div>
+    </div>
+</body>
+</html>
